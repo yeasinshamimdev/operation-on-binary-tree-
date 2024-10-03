@@ -18,6 +18,8 @@ public:
 
 void level_order_print(Node *root)
 {
+  if (root == NULL)
+    return;
   queue<Node *> q;
   q.push(root);
   while (!q.empty())
@@ -58,6 +60,8 @@ int main()
   d->left = f;
   d->right = g;
   h->right = i;
+
+  level_order_print(root);
 
   return 0;
 }
